@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { conversationRepository } from '../repositories/conversation.repository.ts';
+import { conversationRepository } from '../repositories/conversation.repository.js';
 
 const client = new OpenAI({
    apiKey: process.env.OPENAI_API_KEY,

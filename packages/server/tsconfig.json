@@ -3,16 +3,18 @@
       // Environment setup & latest features
       "lib": ["ESNext"],
       "target": "ESNext",
-      "module": "nodenext",
+      "module": "NodeNext",
       "moduleDetection": "force",
       "jsx": "react-jsx",
       "allowJs": true,
 
-      // Bundler mode
-      "moduleResolution": "nodenext",
-      "allowImportingTsExtensions": true,
+      // Bundler / Node ESM mode
+      "moduleResolution": "NodeNext",
       "verbatimModuleSyntax": true,
-      "noEmit": true,
+      "noEmit": false,
+      "declaration": false,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
       "outDir": "./dist",
 
       // Best practices
