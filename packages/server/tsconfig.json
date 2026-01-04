@@ -12,7 +12,7 @@
       "moduleResolution": "nodenext",
       "allowImportingTsExtensions": true,
       "verbatimModuleSyntax": true,
-      "noEmit": false,
+      "noEmit": true,
       "outDir": "./dist",
 
       // Best practices
