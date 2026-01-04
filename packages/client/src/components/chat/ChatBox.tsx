@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { api } from '@/lib/api';
 import { useRef, useState } from 'react';
 import ChatInput, { type ChatFormData } from './ChatInput';
 import type { Message } from './ChatMessages';
@@ -31,13 +31,10 @@ const ChatBox = () => {
          setError('');
          popAudio.play();
 
-         const { data } = await axios.post<ChatResponse>(
-            'https://chatbotservers.vercel.app/api/chat',
-            {
-               prompt,
-               conversationId: conversationId.current,
-            }
-         );
+         const { data } = await api.post<ChatResponse>('/api/chat', {
+            prompt,
+            conversationId: conversationId.current,
+         });
          setMessages((prev) => [
             ...prev,
             { content: data.message, role: 'bot' },
