@@ -1,4 +1,4 @@
-import OpenAI from 'openai';
+import { OpenAI } from 'openai';
 import { conversationRepository } from '../repositories/conversation.repository.js';
 
 const client = new OpenAI({
