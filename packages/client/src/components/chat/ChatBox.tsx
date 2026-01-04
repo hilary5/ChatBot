@@ -52,7 +52,7 @@ const ChatBox = () => {
    };
 
    return (
-      <div className="flex flex-col h-full max-w-2xl mx-auto">
+      <div className="flex flex-col h-full max-w-2xl mx-auto p-10 overflow-y-hidden">
          <div className="flex flex-col flex-1 gap-3 mb-10 overflow-y-auto max-w-2xl">
             {<ChatMessages messages={messages} />}
             {isBotTyping && <TypingIndicator />}
