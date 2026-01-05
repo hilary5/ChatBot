@@ -52,8 +52,8 @@ const ChatBox = () => {
    };
 
    return (
-      <div className="flex flex-col h-full max-w-2xl mx-auto">
-         <div className="flex flex-col flex-1 gap-3 mb-10 overflow-y-auto">
+      <div className="flex flex-col h-full max-w-2xl mx-auto gap-4">
+         <div className="flex flex-col flex-1 gap-3  overflow-y-auto">
             {<ChatMessages messages={messages} />}
             {isBotTyping && <TypingIndicator />}
             {error && <div className="text-red-500">{error}</div>}
