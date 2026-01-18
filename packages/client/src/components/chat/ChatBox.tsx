@@ -57,7 +57,7 @@ const ChatBox = () => {
             {messages.length > 0 ? (
                <ChatMessages messages={messages} />
             ) : (
-               <div className="text-center text-gray-500 mt-10">
+               <div className="text-gray-500 flex-grow flex items-center justify-center">
                   'No messages yet. Start the conversation!'
                </div>
             )}
