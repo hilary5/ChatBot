@@ -57,7 +57,9 @@ const ChatBox = () => {
             {messages.length > 0 ? (
                <ChatMessages messages={messages} />
             ) : (
-               'No messages yet. Start the conversation!'
+               <div className="text-center text-gray-500 mt-10">
+                  'No messages yet. Start the conversation!'
+               </div>
             )}
             {isBotTyping && <TypingIndicator />}
             {error && <div className="text-red-500">{error}</div>}
