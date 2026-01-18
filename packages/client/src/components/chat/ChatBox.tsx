@@ -54,7 +54,11 @@ const ChatBox = () => {
    return (
       <div className="flex flex-col h-full max-w-2xl mx-auto gap-4">
          <div className="flex flex-col flex-1 gap-3  overflow-y-auto">
-            {<ChatMessages messages={messages} />}
+            {messages.length > 0 ? (
+               <ChatMessages messages={messages} />
+            ) : (
+               'No messages yet. Start the conversation!'
+            )}
             {isBotTyping && <TypingIndicator />}
             {error && <div className="text-red-500">{error}</div>}
          </div>
